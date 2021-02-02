@@ -1,0 +1,182 @@
+PedimapFileVersion=10
+DataFile "Example.dat"
+IBDAlleles 8
+
+[SUBPOP 0 ]
+Name Apples
+Ordering 1
+LastSub 1
+Flag 0
+Origin -1
+SelLines 0
+
+[Notes 0 lines]
+[Notes_end]
+
+CurrentView 0
+
+[View "View1"]
+PageCol=16777215
+ShowCrossings=1
+CrossSizeMM=400
+LeftRight=0
+GenerDist=5
+BetwFamSpace=100
+BetwSibSpace=50
+IBackCol=9895935
+LoCol=16711680
+HiCol=255
+MVCol=16777215
+IFixedColor=1
+IndFront=0
+IndFrames=1
+NameCentered=1
+IndivContents=icNone
+INameFontName=Arial
+INameFontSize=9
+INameFontStyle=0
+INameFontColor=0
+TraitSelCount=0
+MarkByName=0
+MarkCodeColors=3
+0 255 35071 
+MarkSelCount=0
+ProbWidthMM=1000
+ProbHeighMM=2500
+LG=
+ProbBig=9000
+ProbSmall=5000
+IBDColors 46336 11918773 11862016 14529973 11908352 14540213 181 11908573
+HomFounders=0
+AlleleFontName=Arial
+AlleleFontSize=7
+AlleleFontStyle=0
+AlleleFontColor=0
+AllIBDmrk=1
+CrossCol=0
+Par1Col=255
+Par2Col=16711680
+ParSelfedCol=8388736
+InfoSelected=1
+InfoParents=1
+InfoTraits 0 1
+[View_end]
+
+[SUBPOP_END]
+
+[SUBPOP 1 ]
+Name "Septer relatives"
+Ordering 1
+LastSub 0
+Flag 1
+Origin 0
+SelLines 1
+0 1 Septer 1 1 0 1 2
+
+[Notes 1 lines]
+Immediate relatives of Septer
+[Notes_end]
+
+CurrentView 2
+
+[View "Length"]
+PageCol=16777215
+ShowCrossings=1
+CrossSizeMM=400
+LeftRight=0
+GenerDist=5
+BetwFamSpace=100
+BetwSibSpace=50
+IBackCol=9895935
+LoCol=16711680
+HiCol=255
+MVCol=16777215
+IFixedColor=0
+ColorTrait=Length
+IndFront=0
+IndFrames=1
+NameCentered=1
+IndivContents=icNone
+INameFontName=Arial
+INameFontSize=9
+INameFontStyle=0
+INameFontColor=0
+TraitSelCount=0
+MarkByName=0
+MarkCodeColors=3
+0 255 35071 
+MarkSelCount=0
+ProbWidthMM=1000
+ProbHeighMM=2500
+LG=A
+ProbBig=9000
+ProbSmall=5000
+IBDColors 46336 11918773 11862016 14529973 11908352 14540213 181 11908573
+HomFounders=0
+AlleleFontName=Arial
+AlleleFontSize=7
+AlleleFontStyle=0
+AlleleFontColor=0
+AllIBDmrk=1
+CrossCol=0
+Par1Col=255
+Par2Col=16711680
+ParSelfedCol=8388736
+InfoSelected=1
+InfoParents=1
+InfoTraits 0 1
+[View_end]
+
+[View "Color"]
+PageCol=16777215
+ShowCrossings=1
+CrossSizeMM=400
+LeftRight=0
+GenerDist=5
+BetwFamSpace=100
+BetwSibSpace=50
+IBackCol=9895935
+LoCol=16711680
+HiCol=255
+MVCol=16777215
+IFixedColor=0
+ColorTrait=Color
+TraitColCount=3
+65408 255 65535 
+IndFront=0
+IndFrames=1
+NameCentered=1
+IndivContents=icNone
+INameFontName=Arial
+INameFontSize=9
+INameFontStyle=0
+INameFontColor=0
+TraitSelCount=0
+MarkByName=0
+MarkCodeColors=3
+0 255 35071 
+MarkSelCount=0
+ProbWidthMM=1000
+ProbHeighMM=2500
+LG=A
+ProbBig=9000
+ProbSmall=5000
+IBDColors 46336 11918773 11862016 14529973 11908352 14540213 181 11908573
+HomFounders=0
+AlleleFontName=Arial
+AlleleFontSize=7
+AlleleFontStyle=0
+AlleleFontColor=0
+AllIBDmrk=1
+CrossCol=0
+Par1Col=255
+Par2Col=16711680
+ParSelfedCol=8388736
+InfoSelected=1
+InfoParents=1
+InfoTraits 0 1
+[View_end]
+
+[SUBPOP_END]
+
+[FILE_END]

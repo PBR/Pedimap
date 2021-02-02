@@ -1,0 +1,199 @@
+; Example of a Pedimap data file. All keywords are shown in UPPERCASE
+
+POPULATION = Apples        ; if not specified, the file name is used  
+UNKNOWN    = * -           ; both * and - are accepted as input; only the first is used for display
+                           ; if UNKNOWN not specified, - is used
+NULLHOMOZ  = $             ; this is the default  
+NALLELES   = 8             ; for 8 founder-alleles per locus the IBD probabilities are given
+PLOIDY     = 2             ; this is the default   
+
+PEDIGREE         
+NAME         FEMALE       MALE      Color     Length
+81015-045    Elstar       Elise     Green     12.3
+Cox          *            *         Red       18.0
+Elise        Septer       Cox       Red       23.9
+Elstar       GoldenD      IngridM   Red       17.6
+GoldenD      *            *         Yellow    20.1
+IngridM      *            *         Red       11.4
+Jonathan     *            *         Yellow    14.8
+Septer       Jonathan     GoldenD   Green     22.0
+
+
+LINKAGEGROUP A
+
+MAP
+SSR1                      0
+SSR2                     20
+SSR3                     29
+
+LOCUS       SSR1
+
+ALLELENAMES 180  182  188  194  202 ; these are the only allowed allele names for this locus,
+                                    ; each may occur only once in this list
+
+
+FOUNDERALLELES 180 188 180 194 182 202 180 194 ; these are the allele names corresponding to the 8 founder alleles
+                                               ; for this locus
+                                               ; note that some alleles (180 and 194) occur more than once
+
+                                               
+LOCUS       SSR2
+
+ALLELENAMES 143  149  177  
+
+FOUNDERALLELES 149 149 149 143 149 177 143 143
+
+LOCUS       SSR3
+
+ALLELENAMES 219  221  225  235  237  
+
+FOUNDERALLELES 235 221 225 219 221 237 219 219
+
+
+IBDPOSITIONS 0 20 29  ; the IBD positions correspond here to the locus positions but this is not necessary                                             
+
+
+LINKAGEGROUP B
+
+MAP
+SSR10                      0
+
+LOCUS       SSR10
+
+ALLELENAMES 180  182  188  194  202 ; these are the only allowed allele names for this locus
+
+FOUNDERALLELES 180 188 180 194 182 202 180 194 ; these are the allele names corresponding to the 8 founder alleles
+                                               ; for this locus
+                                               
+IBDPOSITIONS 0                                               
+
+
+LINKAGEGROUP C
+
+MAP
+SSR103                      0
+
+LOCUS       SSR103
+
+ALLELENAMES 180  182  188  194  202 ; these are the only allowed allele names for this locus
+
+FOUNDERALLELES 180 188 180 194 182 202 180 194 ; these are the allele names corresponding to the 8 founder alleles
+                                               ; for this locus
+                                               
+IBDPOSITIONS 0                                               
+  
+
+ALLELES SSR1 ; LG A
+GoldenD        180 0 188 0
+IngridM        180 0 194 0
+Jonathan       182 0 202 0
+Septer         202 0 188 0
+Cox            180 0 194 0
+Elise          202 0 180 0
+Elstar         180 2 $   2 ; either homozygous or null allele; highlighted with color code 2
+81015-045      180 0 202 0
+
+ALLELES SSR2 ; LG A
+GoldenD        149 2 $   2
+IngridM        149 0 143 0
+Jonathan       149 0 177 0
+Septer         177 0 149 0
+Cox            143 2 $   2
+Elise          -   1 -   1 ; missing data, highlighted with color code 1
+Elstar         149 2 $   2
+81015-045      149 0 143 0
+
+ALLELES SSR3 ; LG A
+GoldenD        235 0 221 0
+IngridM        225 0 219 0
+Jonathan       237 0 221 0
+Septer         237 0 221 0
+Cox            219 2 $   2
+Elise          237 0 219 0
+Elstar         235 0 225 0
+81015-045      225 0 219 0
+
+ALLELES SSR10 ; LG B
+GoldenD        180 0 188 0
+IngridM        180 0 194 0
+Jonathan       182 0 202 0
+Septer         202 0 188 0
+Cox            180 0 194 0
+Elise          202 0 180 0
+Elstar         180 2 $   2 ; either homozygous or null allele; highlighted with color code 2
+81015-045      180 0 202 0
+
+ALLELES SSR103 ; LG C
+GoldenD        180 0 188 0
+IngridM        180 0 194 0
+Jonathan       182 0 202 0
+Septer         202 0 188 0
+Cox            180 0 194 0
+Elise          202 0 180 0
+Elstar         180 2 $   2 ; either homozygous or null allele; highlighted with color code 2
+81015-045      180 0 202 0
+
+IBDPOSITION  0 ; LG A
+;               maternal IBD probabilities                             paternal IBD probabilities
+;founders:      GoldenD   IngridM   Jonathan  Cox                      GoldenD   IngridM   Jonathan  Cox
+;allele number: 1    2    3    4    5    6    7    8                   1    2    3    4    5    6    7    8  
+
+GoldenD         1.0  0    0    0    0    0    0    0                   0    1.0  0    0    0    0    0    0   
+IngridM         0    0    1.0  0    0    0    0    0                   0    0    0    1.0  0    0    0    0   
+Jonathan        0    0    0    0    1.0  0    0    0                   0    0    0    0    0    1.0  0    0   
+Septer          0    0    0    0    0    1.0  0    0                   0    1.0  0    0    0    0    0    0   
+Cox             0    0    0    0    0    0    1.0  0                   0    0    0    0    0    0    0    1.0 
+Elise           0    0    0    0    0    1.0  0    0                   0    0    0    0    0    0    1.0  0   
+Elstar          1.0  0    0    0    0    0    0    0                   0    0    1.0  0    0    0    0    0   
+81015-045       0.22 0    0.78 0    0    0    0    0                   0    0    0    0    0    1.0  0    0   
+
+IBDPOSITION  20 ; LG A
+GoldenD         1.0  0    0    0    0    0    0    0                   0    1.0  0    0    0    0    0    0   
+IngridM         0    0    1.0  0    0    0    0    0                   0    0    0    1.0  0    0    0    0   
+Jonathan        0    0    0    0    1.0  0    0    0                   0    0    0    0    0    1.0  0    0   
+Septer          0    0    0    0    0.17 0.83 0    0                   0.07 0.93 0    0    0    0    0    0   
+Cox             0    0    0    0    0    0    1.0  0                   0    0    0    0    0    0    0    1.0 
+Elise           0.00 0.02 0    0    0.16 0.82 0    0                   0    0    0    0    0    0    0.84 0.16
+Elstar          0.93 0.07 0    0    0    0    0    0                   0    0    0.84 0.16 0    0    0    0   
+81015-045       0.08 0.01 0.77 0.15 0    0    0    0                   0.00 0.01 0    0    0.05 0.26 0.58 0.11
+
+IBDPOSITION  29 ; LG A
+GoldenD         1.0  0    0    0    0    0    0    0                   0    1.0  0    0    0    0    0    0   
+IngridM         0    0    1.0  0    0    0    0    0                   0    0    0    1.0  0    0    0    0   
+Jonathan        0    0    0    0    1.0  0    0    0                   0    0    0    0    0    1.0  0    0   
+Septer          0    0    0    0    0.22 0.78 0    0                   0.07 0.93 0    0    0    0    0    0   
+Cox             0    0    0    0    0    0    1.0  0                   0    0    0    0    0    0    0    1.0 
+Elise           0    0    0    0    0.22 0.78 0    0                   0    0    0    0    0    0    0.78 0.22
+Elstar          0.93 0.07 0    0    0    0    0    0                   0    0    0.78 0.22 0    0    0    0   
+81015-045       0    0    0.78 0.22 0    0    0    0                   0    0    0    0    0.00 0.00 0.78 0.22
+
+
+IBDPOSITION  0 ; LG B
+
+;               maternal IBD probabilities                             paternal IBD probabilities
+;founders:      GoldenD   IngridM   Jonathan  Cox                      GoldenD   IngridM   Jonathan  Cox
+;allele number: 1    2    3    4    5    6    7    8                   1    2    3    4    5    6    7    8  
+
+GoldenD         1.0  0    0    0    0    0    0    0                   0    1.0  0    0    0    0    0    0   
+IngridM         0    0    1.0  0    0    0    0    0                   0    0    0    1.0  0    0    0    0   
+Jonathan        0    0    0    0    1.0  0    0    0                   0    0    0    0    0    1.0  0    0   
+Septer          0    0    0    0    0    1.0  0    0                   0    1.0  0    0    0    0    0    0   
+Cox             0    0    0    0    0    0    1.0  0                   0    0    0    0    0    0    0    1.0 
+Elise           0    0    0    0    0    1.0  0    0                   0    0    0    0    0    0    1.0  0   
+Elstar          1.0  0    0    0    0    0    0    0                   0    0    1.0  0    0    0    0    0   
+81015-045       0.22 0    0.78 0    0    0    0    0                   0    0    0    0    0    1.0  0    0 
+
+IBDPOSITION  0 / LG C
+
+;               maternal IBD probabilities                             paternal IBD probabilities
+;founders:      GoldenD   IngridM   Jonathan  Cox                      GoldenD   IngridM   Jonathan  Cox
+;allele number: 1    2    3    4    5    6    7    8                   1    2    3    4    5    6    7    8  
+
+GoldenD         1.0  0    0    0    0    0    0    0                   0    1.0  0    0    0    0    0    0   
+IngridM         0    0    1.0  0    0    0    0    0                   0    0    0    1.0  0    0    0    0   
+Jonathan        0    0    0    0    1.0  0    0    0                   0    0    0    0    0    1.0  0    0   
+Septer          0    0    0    0    0    1.0  0    0                   0    1.0  0    0    0    0    0    0   
+Cox             0    0    0    0    0    0    1.0  0                   0    0    0    0    0    0    0    1.0 
+Elise           0    0    0    0    0    1.0  0    0                   0    0    0    0    0    0    1.0  0   
+Elstar          1.0  0    0    0    0    0    0    0                   0    0    1.0  0    0    0    0    0   
+81015-045       0.22 0    0.78 0    0    0    0    0                   0    0    0    0    0    1.0  0    0 
