@@ -9,6 +9,13 @@ installation folder. This executable runs under all 32-bit and
 64-bit Windows versions (at least up to the current -2021-
 version of Windows 10).
 
+Installation:
+Download the zip file from the installation folder.
+Unzip the contents of this file to any directory (a new folder
+Pedimap in the Program Files folder would be a logical place)
+and double-click to run. Vor furthe instructions see the
+readme.txt and PedimaManual.pdf, both included in the zip file.
+
 Citation:
 Voorrips RE, Bink MCAM, Van de Weg WE (2012) Pedimap: software
 for the visualization of genetic and phenotypic data in pedigrees.
